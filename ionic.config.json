@@ -1,0 +1,7 @@
+{
+  "name": "Conduit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
