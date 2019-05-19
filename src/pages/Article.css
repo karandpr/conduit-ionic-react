@@ -1,0 +1,24 @@
+.border-input {
+    border: 1px solid #c8ccd0;
+
+}
+.article-title{
+    color: #6cbf6c;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.article-description {
+    color: #888888;
+    font-size:16px;
+    padding-bottom: 10px;
+}
+.horizontal-line{
+    height: 1px;
+    color: #6cbf6c;
+    background-color: #6cbf6c;
+    
+}
+.border-green {
+border: 1px solid #bfd4bf;
+}

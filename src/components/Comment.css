@@ -1,0 +1,17 @@
+.comment-body {
+    font-size: 16px;
+}
+
+.comment-author {
+ color: #6cbf6c;
+ font-size: 12px;
+}
+.comment-box{
+    border :1px solid #ccc;
+    border-radius: 3%;
+    padding : 12px;
+}
+.delete-icon{
+    font-size: 20px;
+    float: right;
+}
