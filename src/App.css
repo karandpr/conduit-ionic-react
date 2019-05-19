@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 .App {
-  text-align: center;
+  font-family: titillium web,sans-serif;  
 }
 
 .App-logo {
@@ -30,4 +31,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+:root {
+  --ion-color-success: #5cb85c;
+  --ion-color-success-rgb: 92,184,92;
+  --ion-color-success-contrast: #faf4f4;
+  --ion-color-success-contrast-rgb: 0,0,0;
+  --ion-color-success-shade: #51a251;
+  --ion-color-success-tint: #6cbf6c;
+}
+
+.header {
+  font-family: titillium web,sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: left;
+  
+}
+.sidemenu-link{
+  text-decoration: none;
+  color: #282c34;
+  padding: 14px;
+
+}
+
+.conduit-title {
+  font-family: titillium web,sans-serif;
+  color: #5cb85c;
+  font-weight: 900;
+  font-size: 32px;
+
 }
