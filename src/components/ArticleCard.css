@@ -1,0 +1,29 @@
+.title{
+    font-weight: 600;
+    font-family: titillium web,sans-serif; 
+    font-size: 16px !important; 
+    color: #000;
+    padding-left: 11px;    
+
+}
+.description {
+      
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.icon-blog-card{
+    font-size: 1.0rem;
+    margin-top: 2px;
+}
+.author{
+    font-size: 14px;
+    color: #6cbf6c;
+}
+
+.link{
+    text-decoration: none;
+    color: #6cbf6c;
+    text-align: right;
+    font-size: 12px;
+}
