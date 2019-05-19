@@ -7,29 +7,41 @@ class SideMenu extends React.Component<any, any> {
   constructor(props: any){
     super(props);
     this.state = {      
-      isLoggedIn: localStorage.getItem("isLogin") ? localStorage.getItem("isLogin") :"false",    
+      isLoggedIn: localStorage.getItem("isLogin") ? localStorage.getItem("isLogin") :"false",   
+      routes:  {
+        appPages: [
+          { title: 'Home', path: '/', icon: 'home' },         
+        ],
+        loggedInPages: [
+          { title: 'My Profile', path: '/profile/'+localStorage.getItem("username"), icon: 'person'},        
+          { title: 'New Article', path: '/newarticle', icon: 'create' },
+          { title: 'Settings', path: '/settings', icon: 'settings' },
+          { title: 'Logout', path: '/login', icon: 'log-out' }
+        ],
+        loggedOutPages: [
+          { title: 'Login', path: '/login', icon: 'log-in' },
+        ]  }
     }
     window.addEventListener('loggedIn', (e: any) => {            
       this.setState({
-        isLoggedIn : e['detail'].toString()
+        isLoggedIn : e['detail'].toString(),
+        routes : {
+          appPages: [
+            { title: 'Home', path: '/', icon: 'home' },         
+          ],
+          loggedInPages: [
+            { title: 'My Profile', path: '/profile/'+localStorage.getItem("username"), icon: 'person'},        
+            { title: 'New Article', path: '/newarticle', icon: 'create' },
+            { title: 'Settings', path: '/settings', icon: 'settings' },
+            { title: 'Logout', path: '/login', icon: 'log-out' }
+          ],
+          loggedOutPages: [
+            { title: 'Login', path: '/login', icon: 'log-in' },
+          ]  }        
       })      
+ 
     });  
-  }
-
-  routes:any =  {
-    appPages: [
-      { title: 'Home', path: '/', icon: 'home' },         
-    ],
-    loggedInPages: [
-      { title: 'My Profile', path: '/profile/'+localStorage.getItem("username"), icon: 'person'},        
-      { title: 'New Article', path: '/newarticle', icon: 'create' },
-      { title: 'Settings', path: '/settings', icon: 'settings' },
-      { title: 'Logout', path: '/login', icon: 'log-out' }
-    ],
-    loggedOutPages: [
-      { title: 'Login', path: '/login', icon: 'log-in' },
-    ]  }
-    
+  } 
     
    renderMenuItem(menu: any) {
     return (
@@ -52,9 +64,9 @@ class SideMenu extends React.Component<any, any> {
           </IonHeader>
           <IonContent>
             <IonList>
-              {this.routes.appPages.map((art: any) => this.renderMenuItem(art))}
-              {this.state.isLoggedIn === "true" ? <> {this.routes.loggedInPages.map((art: any) =>
-                this.renderMenuItem(art))} </> :<> {this.routes.loggedOutPages.map((art: any) =>
+              {this.state.routes.appPages.map((art: any) => this.renderMenuItem(art))}
+              {this.state.isLoggedIn === "true" ? <> {this.state.routes.loggedInPages.map((art: any) =>
+                this.renderMenuItem(art))} </> :<> {this.state.routes.loggedOutPages.map((art: any) =>
                 this.renderMenuItem(art))} </> }
             </IonList>
           </IonContent>

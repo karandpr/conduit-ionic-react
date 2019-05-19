@@ -125,7 +125,7 @@ class LoginPage extends React.Component <Props & RouteComponentProps<any>, State
               localStorage.setItem("email", result.user.email);
              
               this.event = new CustomEvent('loggedIn', {
-                detail: true
+                detail: true,
               });
               window.dispatchEvent(this.event);
               this.props.history.replace('/');
