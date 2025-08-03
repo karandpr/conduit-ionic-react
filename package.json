@@ -19,7 +19,7 @@
     "react-mde": "^7.3.2",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "showdown": "^1.9.0",
     "typescript": "3.4.5"
   },
